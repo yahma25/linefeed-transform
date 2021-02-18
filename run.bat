@@ -1,1 +1,0 @@
-"C:\Users\yahma\AppData\Local\Programs\Python\Python38\python.exe" ".\transform.py"
