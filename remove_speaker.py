@@ -12,7 +12,7 @@ def parse_lines(lines):
     # -> Hello everybody, good evening.
     new_lines = []
     for line in lines:
-        foundIdx = line.find(':')
+        foundIdx = line.find(': ')
         if (foundIdx > -1):
             new_line = line[foundIdx + 2:]
             new_lines.append(new_line)
@@ -23,7 +23,8 @@ def parse_lines(lines):
 
 for fileName in fileList:
     # splitext()의 [0] = 파일 이름, [1] = 확장자
-    if os.path.splitext(fileName)[1] != '.txt':
+    validExtentions = ['.txt', '.srt']
+    if (os.path.splitext(fileName)[1] not in validExtentions):
         continue
 
     rf = open(PATH_DIR + fileName, 'r', encoding='utf-8')
